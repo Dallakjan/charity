@@ -1,0 +1,46 @@
+@import "./settings/_fonts.scss";
+@import "./settings/_colors.scss";
+
+.home__content1 {
+  width: 50vw;
+  height: 200px;
+
+  .home__content--login {
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 45px 0 35px 0;
+    text-align: center;
+
+    a {
+      font-family: $font-base;
+      padding: 0 30px;
+      font-size: 14px;
+      color: $color-grey;
+
+      &:nth-of-type(2) {
+        padding: 0 120px 0 0;
+      }
+    }
+  }
+
+  .home__content--menu {
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+
+    p {
+      font-size: 18px;
+      font-family: $font-base;
+      color: $color-black;
+      padding: 0 0 0 20px;
+    }
+
+    div {
+      width: 50vw;
+      display: flex;
+    }
+  }
+}

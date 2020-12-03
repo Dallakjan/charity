@@ -1,0 +1,112 @@
+@import "./settings/fonts";
+@import "./settings/colors";
+
+.home {
+  width: 100vw;
+  display: flex;
+
+  .home__img {
+    width: 50vw;
+    height: 100vh;
+    background-image: url("../assets/Home-Hero-Image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .home__content {
+    width: 50vw;
+    height: 100vh;
+
+    .home__content--login {
+      width: 50vw;
+      height: 40px;
+      display: flex;
+      justify-content: flex-end;
+      padding: 45px 0 35px 0;
+      text-align: center;
+
+      p {
+        font-family: $font-base;
+        padding: 0 30px;
+        font-size: 14px;
+        color: $color-grey;
+
+        &:nth-of-type(2) {
+          padding: 0 150px 0 0;
+        }
+      }
+    }
+
+    .home__content--menu {
+      width: 50vw;
+      height: 40px;
+      display: flex;
+      justify-content: space-around;
+
+      p {
+        font-size: 18px;
+        font-family: $font-base;
+        color: $color-black;
+        padding: 0 0 0 20px;
+
+        &:last-of-type {
+          margin: 0 150px 0 0;
+        }
+      }
+    }
+
+    .home__content--article {
+      padding-top: 120px;
+      height: 150px;
+      width: 40vw;
+
+      article {
+        font-size: 38px;
+        font-family: $font-base;
+        text-align: center;
+
+        &:first-of-type {
+          padding-bottom: 25px;
+        }
+      }
+    }
+
+    .home__content--asset {
+      padding-top: 15px;
+      height: 35px;
+      width: 50vw;
+
+      div {
+        height: 35px;
+        width: 400px;
+        background-image: url("../assets/Decoration.svg");
+        background-repeat: no-repeat;
+        margin: 0 auto;
+      }
+    }
+
+    .home__content--buttons {
+      display: flex;
+      padding-top: 65px;
+      width: 50vw;
+      justify-content: space-evenly;
+
+      div {
+        width: 50vw;
+        display: flex;
+        margin: 0 150px 0 50px;
+
+        p {
+          text-align: center;
+          width: 210px;
+          font-size: 36px;
+          font-family: $font-base;
+          padding: 13px;
+          border: 1px solid #3c3c3c;
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+}
