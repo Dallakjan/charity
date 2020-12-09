@@ -1,13 +1,15 @@
 import React from "react";
 import "../scss/_cotact.scss";
 import FromBackground from "../assets/Background-Contact-Form.jpg";
+import insta from "../assets/Instagram.svg";
+import facebook from "../assets/Facebook.svg";
 
 export default function Contact() {
   return (
     <>
       <div className="contact" id="cotact">
         <div className="contact__img">
-          <img src={FromBackground} />
+          <img src={FromBackground} alt="decoration" />
         </div>
         <div className="form">
           <div className="form__header">
@@ -28,6 +30,10 @@ export default function Contact() {
               <input type="text" id="text"></input>
             </div>
             <button>Wyślij</button>
+            <div className="footer">
+              <img src={insta} alt="instagram" />
+              <img src={facebook} alt="facebook" />
+            </div>
           </form>
         </div>
       </div>
