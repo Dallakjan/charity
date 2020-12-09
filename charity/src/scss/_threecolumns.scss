@@ -1,0 +1,101 @@
+@import "./settings/_colors";
+@import "./settings/_fonts";
+
+.threeColumns {
+  width: 100vw;
+  height: 385px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $color-yellow;
+
+  .threeColumns__left {
+    width: 335px;
+    height: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h3 {
+      font-size: 90px;
+      color: $color-khaki;
+      font-family: $font-base;
+      font-weight: lighter;
+      padding-bottom: 50px;
+    }
+
+    h4 {
+      font-size: 18px;
+      color: $color-lightGrey;
+      font-family: $font-base;
+      padding-bottom: 30px;
+    }
+
+    p {
+      font-size: 16px;
+      color: $color-lightGrey;
+    }
+  }
+
+  .threeColumns__middle {
+    width: 335px;
+    height: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h3 {
+      font-size: 90px;
+      color: $color-khaki;
+      font-family: $font-base;
+      font-weight: lighter;
+      padding-bottom: 50px;
+    }
+
+    h4 {
+      font-size: 18px;
+      color: $color-lightGrey;
+      font-family: $font-base;
+      padding-bottom: 30px;
+    }
+
+    p {
+      font-size: 16px;
+      color: $color-lightGrey;
+    }
+  }
+
+  .threeColumns__right {
+    width: 335px;
+    height: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h3 {
+      font-size: 90px;
+      color: $color-khaki;
+      font-family: $font-base;
+      font-weight: lighter;
+      padding-bottom: 50px;
+    }
+
+    h4 {
+      font-size: 18px;
+      color: $color-lightGrey;
+      font-family: $font-base;
+      padding-bottom: 30px;
+    }
+
+    p {
+      font-size: 16px;
+      color: $color-lightGrey;
+    }
+  }
+}

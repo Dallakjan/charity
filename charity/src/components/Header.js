@@ -1,27 +1,68 @@
 import React from "react";
 import "../scss/_header.scss";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function Header() {
   return (
     <div className="home__content1">
       <div className="home__content--login">
-        <Link to="/login">
-          <p>Zaloguj</p>
+        <Link className="account_lnk" to="/login">
+          Zaloguj
         </Link>
-        <Link to="/register">
-          <p>Załóz konto</p>
+        <Link className="account_lnk" to="/register">
+          Załóz konto
         </Link>
       </div>
       <div className="home__content--menu">
         <div>
-          <Link to="/">
-            <p>Start</p>
+          <Link className="lnk" to="/">
+            Start
           </Link>
-          <p>O co chodzi?</p>
-          <p>O nas</p>
-          <p>Fundacja i organizacje</p>
-          <p>Kontakt</p>
+          <ScrollLink
+            activeClass="active"
+            to="steps"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+            className="scroll"
+          >
+            O co chodzi?
+          </ScrollLink>
+          <ScrollLink
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+            className="scroll"
+          >
+            O nas
+          </ScrollLink>
+          <ScrollLink
+            activeClass="active"
+            to="foundations"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+            className="scroll"
+          >
+            Fundacja i organizacje
+          </ScrollLink>
+          <ScrollLink
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+            className="scroll"
+          >
+            Kontakt
+          </ScrollLink>
         </div>
       </div>
     </div>

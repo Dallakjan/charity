@@ -1,6 +1,7 @@
 import React from "react";
 import "../scss/_login.scss";
 import Header from "./Header";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default function Login() {
   return (
@@ -16,7 +17,9 @@ export default function Login() {
           <input type="password" id="password"></input>
         </form>
         <div className="login__container--register">
-          <p>Załóz konto</p>
+          <Link to="/register">
+            <p>Załóz konto</p>
+          </Link>
           <p>zaloguj się</p>
         </div>
       </div>

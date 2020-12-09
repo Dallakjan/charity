@@ -2,6 +2,11 @@ import React from "react";
 import "../scss/_home.scss";
 import Header from "./Header";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Steps from "./Steps";
+import About from "./About";
+import ThreeColumns from "./ThreeColumns";
+import Foundations from "./Foundations";
+import Contact from "./Contact";
 
 export default function Home() {
   return (
@@ -19,12 +24,21 @@ export default function Home() {
           </div>
           <div className="home__content--buttons">
             <div>
-              <p>ODDAJ RZECZY</p>
-              <p>ZORGANIZUJ ZBIÓRKĘ </p>
+              <Link className="ln" to="/login">
+                <p>ODDAJ RZECZY</p>
+              </Link>
+              <Link className="ln" to="/register">
+                <p>ZORGANIZUJ ZBIÓRKĘ </p>
+              </Link>
             </div>
           </div>
         </div>
       </div>
+      <ThreeColumns />
+      <Steps />
+      <About />
+      <Foundations />
+      <Contact />
     </>
   );
 }

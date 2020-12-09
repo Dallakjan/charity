@@ -1,0 +1,57 @@
+@import "./settings/colors";
+@import "./settings/fonts";
+
+.about {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f0f1f1;
+  margin-top: 45px;
+  display: flex;
+
+  &__left {
+    width: 50vw;
+    height: 935px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .about__left--content {
+      width: 50vw;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h4 {
+        font-size: 38px;
+        padding-bottom: 40px;
+      }
+
+      div {
+        background-image: url("../assets/Decoration.svg");
+        height: 35px;
+        width: 255px;
+        padding-bottom: 60px;
+        background-repeat: no-repeat;
+      }
+
+      article {
+        font-size: 30px;
+        padding-bottom: 40px;
+      }
+
+      img {
+        margin-left: 50%;
+      }
+    }
+  }
+
+  .about__right {
+    width: 50vw;
+    height: 100vh;
+    background-image: url("../assets/People.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

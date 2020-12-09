@@ -31,16 +31,29 @@
     display: flex;
     justify-content: flex-end;
 
-    p {
-      font-size: 18px;
-      font-family: $font-base;
-      color: $color-black;
-      padding: 0 0 0 20px;
-    }
-
     div {
       width: 50vw;
       display: flex;
     }
   }
+}
+
+.lnk {
+  font-size: 18px;
+  font-family: $font-base;
+  color: $color-black;
+  padding: 0 0 0 20px;
+  margin-left: 55px;
+  text-decoration: none;
+}
+
+.scroll {
+  font-size: 18px;
+  font-family: $font-base;
+  color: $color-black;
+  padding: 0 0 0 20px;
+}
+
+.account_lnk {
+  text-decoration: none;
 }

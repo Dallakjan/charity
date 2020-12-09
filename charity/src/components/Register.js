@@ -1,7 +1,7 @@
 import React from "react";
 import "../scss/_register.scss";
 import Header from "./Header";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 export default function Register() {
   return (
     <>
@@ -21,7 +21,9 @@ export default function Register() {
         </form>
         <div className="register__container--register">
           <p>Załóz konto</p>
-          <p>zaloguj się</p>
+          <Link to="/login">
+            <p>zaloguj się</p>
+          </Link>
         </div>
       </div>
     </>
