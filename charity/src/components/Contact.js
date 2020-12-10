@@ -5,14 +5,16 @@ import insta from "../assets/Instagram.svg";
 import facebook from "../assets/Facebook.svg";
 import { db } from "./firebase";
 import Modal from "./modal";
+import { useFormik } from "formik";
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [success, setSuccess] = useState(false);
+  const [loader, setLoader] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoader(true);
 
     db.collection("contacts")
       .add({
@@ -20,12 +22,12 @@ export default function Contact() {
         email: email,
         message: message,
       })
-      .then((res) => {
-        console.log(res);
-        if(res === 'pomyslny') {
-          setSuccess(true);
-        } //?
-        
+      .then(() => {
+        setLoader(false);
+      })
+      .catch((error) => {
+        alert(error.message);
+        setLoader(false);
       });
 
     setName("");
@@ -68,6 +70,13 @@ export default function Contact() {
                 onChange={(e) => setEmail(e.target.value)}
               ></input>
             </div>
+            {email.indexOf("@") === -1 ? (
+              <div class="invalid-feedback" id="inv_mail">
+                Wpisz prawidłowego maila
+              </div>
+            ) : (
+              ""
+            )}
             <div className="form__content--text">
               <label htmlFor="validationCustom01">Wpisz swoją wiadomość</label>
               <input
@@ -79,8 +88,18 @@ export default function Contact() {
                 onChange={(e) => setMessage(e.target.value)}
                 value={message}
               />
+              {message.length <= 5 ? (
+                <div class="invalid-feedback">Wpisz wiadomość</div>
+              ) : (
+                ""
+              )}
             </div>
-            <button>Wyślij</button>
+            <button
+              type="submit"
+              style={{ background: loader ? "#ccc" : "#ffffffc9" }}
+            >
+              Wyślij
+            </button>
             <div className="footer">
               <img src={insta} alt="instagram" />
               <img src={facebook} alt="facebook" />
@@ -88,18 +107,7 @@ export default function Contact() {
           </form>
         </div>
       </div>
-      {success && <Modal />}
-      
+      {loader && <Modal />}
     </>
   );
 }
-
-
-
-
-// let data = {
-//   fudation: [],
-//   organizastion: []
-// }
-// let fundation = [];
-// let organization: []
