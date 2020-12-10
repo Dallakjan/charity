@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "../scss/_foundations.scss";
 
 export default function Foundations() {
+  const [foundations, setFoundations] = useState(
+    `W naszej bazie znajduję się lista zweryfikowanych Fundacji, z którymi współpracujemy. Mozesz sprawdzic  czym się zajmują, komu pomagają i czego potrzebują.`
+  );
+
+  const handleFoundations = () => {
+    setFoundations(
+      "W naszej bazie znajduję się lista zweryfikowanych Fundacji, z którymi współpracujemy. Mozesz sprawdzic  czym się zajmują, komu pomagają i czego potrzebują."
+    );
+  };
+
+  const handleOrganizations = () => {
+    setFoundations("Pomagamy Organizacjom");
+  };
+
+  const handleLocal = () => {
+    setFoundations("Pomagamy Lokalnie");
+  };
+
   return (
     <>
       <div className="foundation" id="foundations">
@@ -10,14 +28,14 @@ export default function Foundations() {
         <div className="foundation__btn">
           <div>
             <div>
-              <button>Fundacjom</button>
+              <button onClick={handleFoundations}>Fundacjom</button>
             </div>
-            <button>
+            <button onClick={handleOrganizations}>
               Organizacjom <br />
               Pozarządowym
             </button>
             <div>
-              <button>
+              <button onClick={handleLocal}>
                 Lokalnym <br />
                 Zbiórkom
               </button>
@@ -25,8 +43,8 @@ export default function Foundations() {
           </div>
         </div>
         <div className="foundation__content">
-          <div className="foundation__content--header">Header</div>
-          <div className="foundation__content--body">Body</div>
+          <div className="foundation__content--header">{foundations}</div>
+          <div className="foundation__content--body"></div>
           <div className="foundation__content--btn">
             <button>1</button>
             <button>2</button>
