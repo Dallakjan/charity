@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Steps from "./Steps";
 import About from "./About";
 import ThreeColumns from "./ThreeColumns";
-import Foundations from "./Foundations";
+import HomeFoundation from "./HomeFoundations";
 import Contact from "./Contact";
 
 export default function Home() {
@@ -37,7 +37,7 @@ export default function Home() {
       <ThreeColumns />
       <Steps />
       <About />
-      <Foundations />
+      <HomeFoundation />
       <Contact />
     </>
   );

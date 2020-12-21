@@ -5,7 +5,6 @@ import insta from "../assets/Instagram.svg";
 import facebook from "../assets/Facebook.svg";
 import { db } from "./firebase";
 import Modal from "./modal";
-import { useFormik } from "formik";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -72,7 +71,7 @@ export default function Contact() {
             </div>
             {email.indexOf("@") === -1 ? (
               <div class="invalid-feedback" id="inv_mail">
-                Wpisz prawidłowego maila
+                Wpisz mail
               </div>
             ) : (
               ""

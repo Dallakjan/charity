@@ -15,7 +15,7 @@ export default function About() {
               <br />
               hajk dallakjanhajk dallakjanhajk dallakjan
             </article>
-            <img src={signature} />
+            <img src={signature} alt="podpis" />
           </div>
         </div>
         <div className="about__right"></div>
