@@ -18,18 +18,18 @@
     align-items: center;
     margin-bottom: 80px;
     width: 100vw;
+
     li {
-      max-width: 170px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       font-size: 24px;
-      text-align: center;
-      margin: 0 70px;
-      padding: 11px 50px;
-      line-height: 24px;
       cursor: pointer;
       border: 1px solid #fff;
+      padding: 23px 35px;
 
-      &:first-child {
-        padding: 23px 42px;
+      &:nth-child(1) {
+        margin-left: 100px;
       }
     }
   }
@@ -76,7 +76,7 @@
   }
 
   &__line {
-    width: 90vw;
+    width: 90;
     height: 2px;
     background: #707070;
     margin-bottom: 30px;

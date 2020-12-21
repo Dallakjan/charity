@@ -38,15 +38,6 @@
   }
 }
 
-.lnk {
-  font-size: 18px;
-  font-family: $font-base;
-  color: $color-black;
-  padding: 0 0 0 20px;
-  margin-left: 55px;
-  text-decoration: none;
-}
-
 .scroll {
   font-size: 18px;
   font-family: $font-base;
@@ -56,5 +47,14 @@
 }
 
 .account_lnk {
+  text-decoration: none;
+}
+
+.lnk {
+  font-size: 18px;
+  font-family: $font-base;
+  color: $color-black;
+  padding: 0 0 0 20px;
+  margin-left: 55px;
   text-decoration: none;
 }
